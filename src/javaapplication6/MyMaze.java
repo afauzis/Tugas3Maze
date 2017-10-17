@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Random;
+import java.util.Scanner;
 
 public class MyMaze {
     private int dimensionX, dimensionY; // dimension of maze
@@ -316,8 +317,24 @@ public class MyMaze {
   // run it
   public static void main(String[] args) {
       MyMaze maze = new MyMaze(20);
-      
+      Scanner input = new Scanner(System.in);
+      System.out.println("                                     Welcome ");
+      System.out.println("------------------------------------------------------------------------------------");
+      System.out.println("Masukkan 1 jika main , Masukkan 2 jika mau keluar");
+      System.out.print("= ");
+      int isi = input.nextInt();
+      switch(isi){
+      case 1:
+      System.out.println("------------------------------------------------------------------------------------");    
       maze.solve();
       maze.draw();
+      break;
+      case 2:
+      System.out.println("------------------------------------------------------------------------------------");    
+      System.out.println("                                  Terima Kasih ");
+      break;
+      default:
+          break;
+      }
   }
 }
